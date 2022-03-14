@@ -9,21 +9,22 @@ app.get("/", function(req, res) {
 })
 */
 
+// third challenge
+app.use("/public", express.static(__dirname + "/public"));
+
 // second challenge
 app.get("/", function(req, res) {
 	let fileUrl = __dirname + "/views/index.html";
 	res.sendFile(fileUrl);
 })
 
-// third challenge
-app.use("/", function(req, res) {
-	let path = __dirname + "/public";
-	express.static(path);
-});
-
-
-
-
+// fourth challenge
+app.get("/json", function(req, res) {
+	let payload = {
+		"message": "Hello json"
+	}
+	res.json(payload)
+})
 
 
 
