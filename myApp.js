@@ -15,13 +15,11 @@ app.get("/", function(req, res) {
 	res.sendFile(fileUrl);
 })
 
-
-
-
-
-
-
-
+// third challenge
+app.use("/", function(req, res) {
+	let path = __dirname + "/public";
+	express.static(path);
+});
 
 
 
